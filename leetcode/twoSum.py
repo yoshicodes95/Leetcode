@@ -2,11 +2,13 @@ def twoSum(nums, target):
     num_to_index = {}  # Map from number to its index
 
     for i, num in enumerate(nums):
-        complement = target - num
+        diff = target - num
 
-        if complement in num_to_index:
-            return [num_to_index[complement], i]
+        if diff in num_to_index:
+            return [num_to_index[diff], i]
 
         num_to_index[num] = i
 
     return []
+
+print(twoSum([2,9,11,15],13))
